@@ -1,0 +1,49 @@
+nav {
+    display: flex;
+    justify-content: end;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+li{
+    display: inline-block;
+    padding: 5px;
+    font-size: 20px;
+    background-color: rgb(44, 50, 50);
+    box-shadow: 2px 2px;
+    
+}
+a {
+    text-decoration: none;
+    color: azure;
+    
+}
+footer{
+    position: fixed;
+    bottom:0;
+    text-align: center;
+    left: 0;
+    width: 100%;
+}
+#calc{
+    text-align: center;
+}
+#calculator{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+   
+}
+ #num1, #num2, #sum{
+    margin-bottom: 15px;
+    box-shadow: 2px 2px #5d5d5d;
+ }
+
+ #results{
+    text-align: center;
+ }
