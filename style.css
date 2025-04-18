@@ -1,3 +1,7 @@
+body{
+    font-family: "Roboto";
+}
+
 nav {
     display: flex;
     justify-content: end;
@@ -28,7 +32,7 @@ footer{
     left: 0;
     width: 100%;
 }
-#calc, #contact{
+#calc, #contact, #confirmation{
     text-align: center;
 }
 #calculator, #contactForm{
@@ -42,6 +46,7 @@ footer{
  #num1, #num2, #sum, #name, #email, #message{
     margin-bottom: 15px;
     box-shadow: 2px 2px #5d5d5d;
+    border-radius: 15%;
  }
 
  #results{
