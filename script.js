@@ -16,8 +16,11 @@ if (sumButton) {
   sumButton.addEventListener("click", calculateSum);
 }
 
+
 let contactFormEl = document.getElementById("contactForm");
 let confirmation = document.getElementById("confirmation");
+
+// add event listener to form
 contactFormEl.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -25,10 +28,12 @@ contactFormEl.addEventListener("submit", function (e) {
   let email = document.getElementById("email").value;
   let message = document.getElementById("message").value;
 
+//   validation to prevent empty inputs
   if (name === "" || email === "" || message === "") {
     confirmation.innerHTML = "Please fill out all the fields!";
   } else {
     confirmation.innerHTML = "Thank you for your message!";
   }
 });
+// reset form
 contactFormEl.reset();
