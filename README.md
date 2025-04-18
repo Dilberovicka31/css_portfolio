@@ -12,7 +12,7 @@ This portfolio is a work in progress and serves as a space to practice my front-
 
 ## 💡 Features
 
-- Responsive layout using basic CSS
+
 - Clean and minimal design
 - Easy navigation between pages
 
@@ -20,6 +20,7 @@ This portfolio is a work in progress and serves as a space to practice my front-
 
 I plan to:
 
+- Responsive layout using basic CSS
 - Improve the design using advanced CSS or a framework like Tailwind or Bootstrap
 - Add interactivity using JavaScript
 - Integrate projects I've completed in school or on my own
