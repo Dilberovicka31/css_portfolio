@@ -28,12 +28,21 @@ contactFormEl.addEventListener("submit", function (e) {
   let email = document.getElementById("email").value;
   let message = document.getElementById("message").value;
 
-//   validation to prevent empty inputs
-  if (name === "" || email === "" || message === "") {
-    confirmation.innerHTML = "Please fill out all the fields!";
-  } else {
+  try {
+    if (name === "" || email === "" || message === ""){
+      throw new Error("Please fill out all the fields!");   
+    }
+    if(!email.includes("@") || !email.includes(".")){
+      throw new Error("Please enter a valid email address.");
+      
+    }
     confirmation.innerHTML = "Thank you for your message!";
+    
+  } catch (error) {
+    confirmation.innerHTML = error.message
+    
   }
+
 });
 // reset form
 contactFormEl.reset();
