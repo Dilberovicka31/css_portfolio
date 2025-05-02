@@ -49,3 +49,26 @@ if(contactFormEl){
   contactFormEl.reset();
   
 }
+
+// web privacy demo
+const userInfo = document.getElementById("userInfo");
+
+const dataPoints = [
+  {label: "Check if browser is online", value: navigator.onLine},
+  {label: "Language", value: navigator.language},
+  {label: "Browser Information", value: navigator.userAgent},
+  {label: "Width of the Screen", value: screen.availWidth},
+  {label: "Height of the Screen", value: screen.availHeight},
+  {label: "Depth of screen's color", value: screen.colorDepth}
+]
+console.log(dataPoints)
+dataPoints.forEach(demo);
+
+function demo(items){
+  let li = document.createElement("li");
+  li.classList.add("browser-info")
+
+  li.textContent = `${items.label}: ${items.value}`
+
+  userInfo.appendChild(li)
+}
