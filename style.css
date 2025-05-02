@@ -32,7 +32,7 @@ footer{
     left: 0;
     width: 100%;
 }
-#calc, #contact, #confirmation{
+#calc, #contact, #confirmation, #results, #title{
     text-align: center;
 }
 #calculator, #contactForm{
@@ -50,6 +50,3 @@ footer{
     background-color: rgb(241, 243, 245);
  }
 
- #results{
-    text-align: center;
- }
