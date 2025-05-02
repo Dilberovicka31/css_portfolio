@@ -21,28 +21,31 @@ let contactFormEl = document.getElementById("contactForm");
 let confirmation = document.getElementById("confirmation");
 
 // add event listener to form
-contactFormEl.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let message = document.getElementById("message").value;
-
-  try {
-    if (name === "" || email === "" || message === ""){
-      throw new Error("Please fill out all the fields!");   
-    }
-    if(!email.includes("@") || !email.includes(".")){
-      throw new Error("Please enter a valid email address.");
+if(contactFormEl){
+  contactFormEl.addEventListener("submit", function (e) {
+    e.preventDefault();
+  
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+  
+    try {
+      if (name === "" || email === "" || message === ""){
+        throw new Error("Please fill out all the fields!");   
+      }
+      if(!email.includes("@") || !email.includes(".")){
+        throw new Error("Please enter a valid email address.");
+        
+      }
+      confirmation.innerHTML = "Thank you for your message!";
+      
+    } catch (error) {
+      confirmation.innerHTML = error.message
       
     }
-    confirmation.innerHTML = "Thank you for your message!";
-    
-  } catch (error) {
-    confirmation.innerHTML = error.message
-    
-  }
-
-});
-// reset form
-contactFormEl.reset();
+  
+  });
+  // reset form
+  contactFormEl.reset();
+  
+}
