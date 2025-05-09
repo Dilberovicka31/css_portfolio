@@ -28,7 +28,7 @@ if(contactFormEl){
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let message = document.getElementById("message").value;
-  
+    let consent = document.getElementById("consent").checked
     try {
       if (name === "" || email === "" || message === ""){
         throw new Error("Please fill out all the fields!");   
@@ -36,6 +36,9 @@ if(contactFormEl){
       if(!email.includes("@") || !email.includes(".")){
         throw new Error("Please enter a valid email address.");
         
+      }
+      if(!consent){
+        throw new Error("You must agree to be contacted.")
       }
       confirmation.innerHTML = "Thank you for your message!";
       
