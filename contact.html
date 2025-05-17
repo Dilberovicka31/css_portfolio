@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="./about.html">About Me</a></li>
-          <li><a href="./projects.html">Projects</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-          <li><a href="./calculate.html">Simple calculator</a></li>
-          <li><a href="./webPrivacy.html">Web Privacy</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1 id="contact">Contact Me</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./about.html">About Me</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./calculate.html">Simple calculator</a></li>
+        <li><a href="./webPrivacy.html">Web Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <form id="contactForm" action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" />
+  <main>
+    <h1 id="contact">Contact Me</h1>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" />
+    <form id="contactForm" action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
 
-        <label for="message">Message:</label>
-        <input id="message" name="message" />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
 
-        <label>
-          <input type="checkbox" id="consent" name="consent" /> I agree to be
-          contacted
-        </label>
+      <label for="message">Message:</label>
+      <!-- ✅ FIXED: changed input to textarea -->
+      <textarea id="message" name="message"></textarea>
 
-        <button id="subBtn" type="submit">Send Message</button>
-      </form>
+      <label>
+        <input type="checkbox" id="consent" name="consent" /> I agree to be contacted
+      </label>
 
-      <p id="confirmation"></p>
-    </main>
-    <footer>
-      <p>&copy; 2025 My Portfolio</p>
-    </footer>
-    <script src="./script.js"></script>
-  </body>
+      <button id="subBtn" type="submit">Send Message</button>
+    </form>
+
+    <p id="confirmation"></p>
+
+    <h2>Feedback Form</h2>
+    <form id="feedbackForm">
+      <label><input type="checkbox" name="features" value="Design"> Design</label><br>
+      <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label><br>
+      <label><input type="checkbox" name="features" value="Speed"> Speed</label><br>
+      <label><input type="checkbox" name="features" value="Accessibility"> Accessibility</label><br>
+      <label><input type="checkbox" name="features" value="Content"> Content</label><br>
+    </form>
+
+    <p><strong>Selected:</strong> <span id="selectedFeatures">None</span></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Portfolio</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
 </html>
