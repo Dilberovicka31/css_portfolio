@@ -111,6 +111,9 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(247, 247, 240);
+    width: 50em;
+    margin: 0 auto;
   }
   p{
     text-align: center;
