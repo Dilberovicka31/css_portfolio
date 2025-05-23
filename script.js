@@ -1,19 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // function to calculate two numbers
-  function calculateSum() {
-    // get the values of input and convert it to a number
-    let num1 = parseFloat(document.getElementById("num1").value);
-    let num2 = parseFloat(document.getElementById("num2").value);
-    //   sum
-    let sum = num1 + num2;
-    //   display the total
-    document.getElementById("results").innerHTML = "Sum: " + sum;
-  }
+  
 
   // if there's no submit button in html prevent the error message
   const sumButton = document.getElementById("sum");
   if (sumButton) {
-    sumButton.addEventListener("click", calculateSum);
+    const calculator = new Calculator("num1", "num2", "results");
+
+    sumButton.addEventListener("click", function(){
+      calculator.calculateSum();
+    })
   }
 
   let contactFormEl = document.getElementById("contactForm");
