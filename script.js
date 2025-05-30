@@ -19,6 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
       handler.validateAndSubmit(e);
     })
   }
+
+  const qString = new URLSearchParams(location.search);
+  const name = qString.get("name");
+  const email = qString.get("email");
+  const message = qString.get("message");
+
+  const confirmation = document.getElementById("confirmationMessage");
+  if(name && email && message){
+    confirmation.textContent = `Thank you, ${name}! We have received your message from ${email}: "${message}"`
+  }
+  else{
+    confirmation.textContent = "Missing form data."
+  }
   // web privacy demo
   const userInfo = document.getElementById("userInfo");
 

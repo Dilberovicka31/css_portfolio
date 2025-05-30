@@ -45,8 +45,8 @@ FormHandler.prototype.validateAndSubmit = function(event){
             throw new Error("You must agree to be contacted.");
             
         }
-        this.confirmation.innerHTML = "Thank you for your message!";
-        this.form.reset();
+        const queryString=  `confirm.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`;
+        location.href = queryString
     } catch(error){
         this.confirmation.innerHTML = error.message;
     }
