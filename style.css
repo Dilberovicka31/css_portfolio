@@ -160,3 +160,19 @@ h2{
   font-size: 1.1rem;
   line-height: 1.7;
 }
+#container{
+
+  width: 50%;
+  margin: 10rem auto;
+  padding: 1.5rem;
+  background-color: rgb(247, 247, 240);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.joke-page main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

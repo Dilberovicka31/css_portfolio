@@ -1,23 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
-
   // if there's no submit button in html prevent the error message
   const sumButton = document.getElementById("sum");
   if (sumButton) {
     const calculator = new Calculator("num1", "num2", "results");
 
-    sumButton.addEventListener("click", function(){
+    sumButton.addEventListener("click", function () {
       calculator.calculateSum();
-    })
+    });
   }
 
-// contact form
-  if(document.getElementById("contactForm")){
+  // contact form
+  if (document.getElementById("contactForm")) {
     const handler = new FormHandler("contactForm", "confirmation");
-    handler.form.addEventListener("submit", function(e){
-      e.preventDefault()
+    handler.form.addEventListener("submit", function (e) {
+      e.preventDefault();
       handler.validateAndSubmit(e);
-    })
+    });
   }
 
   const qString = new URLSearchParams(location.search);
@@ -26,12 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const message = qString.get("message");
 
   const confirmation = document.getElementById("confirmationMessage");
-  if(name && email && message){
-    confirmation.textContent = `Thank you, ${name}! We have received your message from ${email}: "${message}"`
+  if (confirmation) {
+    if (name && email && message) {
+      confirmation.textContent = `Thank you, ${name}! We have received your message from ${email}: "${message}"`;
+    } else {
+      confirmation.textContent = "Missing form data.";
+    }
   }
-  else{
-    confirmation.textContent = "Missing form data."
-  }
+
   // web privacy demo
   const userInfo = document.getElementById("userInfo");
 
@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   if (userInfo) {
-  dataPoints.forEach(demo);
-}
+    dataPoints.forEach(demo);
+  }
 
   function demo(items) {
     let li = document.createElement("li");
@@ -89,4 +89,5 @@ document.addEventListener("DOMContentLoaded", function () {
       output.textContent = selected.length ? selected.join(", ") : "None";
     });
   });
+
 });
